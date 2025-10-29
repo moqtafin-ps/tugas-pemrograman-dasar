@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+const double PI = 3.1416;
+
+// Functioun to calculate distance
+double distance(double x1, double y1, double x2, double y2)
+{
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+
+// Function to calculate radius (distance)
+double radius(double x1, double y1, double x2, double y2)
+{
+    return distance(x1, y1, x2, y2);
+}
+
+// Function to calculate circumference
+double circumference(double r)
+{
+    return 2 * PI * r;
+}
+
+// Function to calculate area
+double area(double r)
+{
+    return PI * pow(r, 2);
+}
+
+int main()
+{
+    double x1, y1, x2, y2;
+
+    cout << "Enter the center of the circle:" << endl;
+    cout << "x1: ";
+    cin >> x1;
+    cout << "y1: ";
+    cin >> y1;
+
+    cout << "Enter a point on the circle:" << endl;
+    cout << "x2: ";
+    cin >> x2;
+    cout << "y2: ";
+    cin >> y2;
+
+    double r = radius(x1, y1, x2, y2);
+    double d = 2 * r;
+    double c = circumference(r);
+    double a = area(r);
+
+    cout << "\n--- Circle Properties ---" << endl;
+    cout << "Radius: " << r << endl;
+    cout << "Diameter: " << d << endl;
+    cout << "Circumference: " << c << endl;
+    cout << "Area: " << a << endl;
+
+    return 0;
+}

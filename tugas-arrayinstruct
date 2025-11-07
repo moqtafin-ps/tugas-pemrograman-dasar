@@ -40,7 +40,7 @@ void getData(studentType students[], int size)
 {
     for (int i = 0; i < size; i++)
     {
-        cout << "Enter first name, last name, and test score for student." << i + 1 << "\n";
+        cout << "Enter first name, last name, and test score for student " << i + 1 << "\n";
         cout << "First Name : ";
         cin >> students[i].studentFName;
         cout << "Last Name : ";
